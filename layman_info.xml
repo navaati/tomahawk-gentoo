@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+	<repo quality="experimental" status="unofficial">
+		<name>tomahawk-navaati</name>
+		<description>tomahawk related ebuilds</description>
+		<homepage>https://github.com/navaati/tomahawk-gentoo</homepage>
+		<owner type="project">
+			<email>leo.gillot@navaati.net</email>
+			<name>Léo Gillot-Lamure</name>
+		</owner>
+		<source type="git">git://github.com/navaati/tomahawk-gentoo.git</source>
+	</repo>
+</repositories>
