@@ -32,7 +32,8 @@ src_prepare() {
 }
 
 src_install() {
-	emake prefix="${D}/${DESTTREE}" destdir="${DESTTREE}" install || die
+	emake prefix="${D}/${DESTTREE}" install || die
+	sed -e "s:PKG_PREFIX:${DESTTREE}:g" <lib/pkgconfig/libspotify.pc >"${D}/${DESTTREE}/lib/pkgconfig/libspotify.pc"
 	dodoc README ChangeLog
 	if use doc; then
 	  mkdir -p "${D}/${DESTTREE}/share/man/" || die
