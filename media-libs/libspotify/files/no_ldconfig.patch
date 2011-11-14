@@ -1,0 +1,13 @@
+--- Makefile
++++ Makefile
+@@ -13,9 +13,7 @@
+ 	cd $(prefix)/lib && ln -sf libspotify.so.10.1.16 libspotify.so.10 && ln -sf libspotify.so.10.1.16 libspotify.so
+ 
+ 	mkdir -p $(prefix)/lib/pkgconfig
+-	sed -e s:PKG_PREFIX:$(prefix):g <lib/pkgconfig/libspotify.pc >$(prefix)/lib/pkgconfig/libspotify.pc
+-
+-	ldconfig
++	sed -e s:PKG_PREFIX:$(destdir):g <lib/pkgconfig/libspotify.pc >$(prefix)/lib/pkgconfig/libspotify.pc
+ 
+ uninstall:
+ 	rm -rf $(prefix)/include/libspotify
